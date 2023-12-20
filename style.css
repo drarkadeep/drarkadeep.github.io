@@ -1,0 +1,101 @@
+:root {
+    --font-color: rgb(247, 247, 247);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+    position: absolute;
+	-webkit-font-smoothing: antialiased;
+	user-select: none;
+}
+
+#particles-js, #parallax, .layer, .name{
+	height: 100vh;
+    width: 100vw;
+	position: absolute;
+}
+
+#parallax {
+    background: linear-gradient(-45deg, rgb(0, 0, 50) 0%, rgb(10, 0, 40) 25%, rgb(25, 0, 25) 50%, rgb(40, 0, 10) 75%, rgb(50, 0, 0) 100%);
+    background-size: 200% 200%;
+    animation: gradient 10s ease-in-out infinite;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--font-color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-shadow: var(--font-color) 0px 0px 1px, var(--font-color) 0px 0px 2px, var(--font-color) 0px 0px 5px, var(--font-color) 0px 0px 10px, var(--font-color) 0px 0px 20px;
+    animation: wobble 5s ease-in-out infinite;
+}
+
+.name:hover {
+    transform: scale(1.2x);
+}
+
+.pc-name {
+    font-size: 10vw;
+    letter-spacing: 2vw;
+	position: absolute;
+}
+
+.mobile-name {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        .pc-name {
+            display: none;
+        }
+
+        .mobile-name {
+            visibility: visible;
+            font-size: 15vw;
+            letter-spacing: 4vw;
+            line-height: 12vh;
+        }
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes wobble {
+  25% {
+    transform: rotate(2.5deg);
+  }
+  75% {
+    transform: rotate(-2.5deg);
+  }
+}
