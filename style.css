@@ -16,7 +16,7 @@ body {
 	user-select: none;
 }
 
-#particles-js, #parallax, .layer, .name{
+#parallax, .layer, .name, #particles-js{
 	height: 100vh;
     width: 100vw;
 	position: absolute;
@@ -37,11 +37,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
     text-shadow: var(--font-color) 0px 0px 1px, var(--font-color) 0px 0px 2px, var(--font-color) 0px 0px 5px, var(--font-color) 0px 0px 10px, var(--font-color) 0px 0px 20px;
-    animation: wobble 5s ease-in-out infinite;
-}
-
-.name:hover {
-    transform: scale(1.2x);
+    animation: pulse 3s infinite;
 }
 
 .pc-name {
@@ -89,13 +85,4 @@ body {
     100% {
         background-position: 0% 0%;
     }
-}
-
-@keyframes wobble {
-  25% {
-    transform: rotate(2.5deg);
-  }
-  75% {
-    transform: rotate(-2.5deg);
-  }
 }
