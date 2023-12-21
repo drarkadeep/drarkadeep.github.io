@@ -6,4 +6,6 @@ var scene = document.getElementById('parallax');
 var parallaxInstance = new Parallax(scene, {
 	invertX: true,
 	invertY: true,
+	frictionX: 0.2,
+	frictionY: 0.2
 });
