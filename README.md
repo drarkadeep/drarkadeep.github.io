@@ -7,11 +7,12 @@
 
 ***
 ## Main Sections 
-- [] create stonks borders
-- [] figure out agreeable color palette for different sections 
+[] create stonks borders
+[] figure out agreeable color palette for different sections
+[] add midsection stamps
 
 ### Rudimentary Contact form
-- [] create a basic contact form
+[x] create a basic contact form
 
 ***
 ## Footer
