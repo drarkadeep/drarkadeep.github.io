@@ -1,23 +1,26 @@
 # Roadmap for [Arkadeep.com](https://arkadeep.com)
 
 ## Hero section
-- [x] create hero animation
-- [] randomise hero animation
-- [] control for hero animation^
-
+[x] create hero animation
+[] randomise hero animation
+[] control for hero animation^
+[] have subtitle not just the name, bruh
 ***
 ## Main Sections 
 [] create stonks borders
-[] figure out agreeable color palette for different sections
-[] add midsection stamps
+[] add midsection stamps (easy, rel/abs will do it)
+[] figure out @media checkpoints
+  [] figure out font sizes
+  [] figure out agreeable color palette for different sections
+
 
 ### Rudimentary Contact form
 [x] create a basic contact form
 
 ***
 ## Footer
-- [] create rudimentary footer
-- [] add basic contact details
+[] create rudimentary footer
+[] add basic contact details
 
 _^ - this symbol indicates that the feature has been added as an easter egg. I have documented the easter eggs below._
 
