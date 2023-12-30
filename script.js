@@ -1,4 +1,8 @@
-tsParticles.loadJSON('tsparticles', 'particles.json');
+tsParticles
+    .load({
+        id: "tsparticles",
+        url: "particles.json",
+    });
 
 function isTouchDevice() {
 	return (('ontouchstart' in window) ||
