@@ -1,11 +1,17 @@
 # Roadmap for [Arkadeep.com](https://arkadeep.com)
 
 # Other milestones put on hold, doing these first
+[x] move assets into assets
 [] follow basic design principles for #good-text
 [x] replace particles.js with tsparticles
+  [] now fix the goddamn json
+[] marquee hatao, css marquee lao
 [x] get rid of parallax in mobile devices
-[] get rid of animate.css
+[x] get rid of animate.css
 [x] get rid of jquery
+
+# CSS challenges
+[] 
 
 ## Hero section
 [x] create hero animation
