@@ -14,8 +14,13 @@ body {
     user-select: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    line-height: 1.2!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2 !important;
 }
 
 header {
@@ -31,12 +36,22 @@ header {
     border-bottom: 10px solid black;
 }
 
-#parallax,
-.layer,
-.name,
-#particles-js {
+#parallax {
+    position: relative;
     height: 80vh;
     width: 100vw;
+}
+
+.layer,
+.name,
+#tsparticles {
+    position: absolute;
+    height: 80vh;
+    width: 100vw;
+}
+
+#tsparticles {
+    z-index: -1 !important;
 }
 
 #parallax {

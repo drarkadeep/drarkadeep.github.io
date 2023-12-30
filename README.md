@@ -1,5 +1,12 @@
 # Roadmap for [Arkadeep.com](https://arkadeep.com)
 
+# Other milestones put on hold, doing these first
+[] follow basic design principles for #good-text
+[] replace particles.js with tsparticles
+[x] get rid of parallax in mobile devices
+[] get rid of animate.css
+[] get rid of jquery
+
 ## Hero section
 [x] create hero animation
 [] randomise hero animation
