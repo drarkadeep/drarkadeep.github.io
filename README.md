@@ -54,5 +54,5 @@ Do not expand these, instead try to tinker with the website to find the easter e
     </details>
 
 ### Roadmap roadmap (T_T) _(in Hindi)_
-[] hr ko hata bhai
-[] checkbox ke pehle bullet ki jarurat nahi
+- [ ] hr ko hata bhai
+- [ ] checkbox ke pehle bullet ki jarurat nahi
