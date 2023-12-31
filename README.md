@@ -9,6 +9,7 @@
 - [x] get rid of parallax in mobile devices
 - [x] get rid of animate.css
 - [x] get rid of jquery
+- [ ] tailwind-ify 
 
 # CSS challenges
 - [ ] custom scrollbars

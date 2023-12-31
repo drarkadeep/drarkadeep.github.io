@@ -4,7 +4,7 @@
 
 html,
 body {
-    margin: 0px;
+    margin: 0 auto;
     padding: 0px;
     overflow-x: hidden;
     height: 100vh;
@@ -154,11 +154,10 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
-    font-size: 1.8em;
+    font-size: 1.5em;
     line-height: 1.5;
     border-bottom: 10px dashed black;
-    padding: 2em;
-    font-weight: 700;
+    padding: 3rem 6rem;
 }
 
 .form-link {
