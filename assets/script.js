@@ -18,15 +18,20 @@ function configureFirebase(apiKey, authDomain, projectId, databaseURL, storageBu
     return firebase;
 }
 
-// Fetch environment variables and configure Firebase on document load
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        // Fetch environment variables from Netlify Function
-        const response = await fetch('/.netlify/functions/getFirebaseConfig');
-        const { apiKey, authDomain, projectId, databaseURL, storageBucket, messagingSenderId, appId } = await response.json();
-
-        // Configure Firebase with fetched environment variables
-        const firebaseInstance = configureFirebase(apiKey, authDomain, projectId, databaseURL, storageBucket, messagingSenderId, appId);
+        const firebaseConfig = {
+            apiKey: process.env.FIREBASE_API_KEY,
+            authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+            projectId: process.env.FIREBASE_PROJECT_ID,
+            databaseURL: process.env.FIREBASE_DATABASE_URL,
+            storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+            messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+            appId: process.env.FIREBASE_APP_ID
+        };
+        
+        const firebaseInstance = configureFirebase(firebaseConfig.apiKey, firebaseConfig.authDomain, firebaseConfig.projectId, firebaseConfig.databaseURL, firebaseConfig.storageBucket, firebaseConfig.messagingSenderId, firebaseConfig.appId);
+        
 
         // Access Firebase database after initialization
         const database = firebaseInstance.database();
