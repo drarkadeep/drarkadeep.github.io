@@ -1,33 +1,13 @@
-function configureFirebase(apiKey, authDomain, projectId, databaseURL, storageBucket, messagingSenderId, appId) {
-    const firebaseConfig = {
-        apiKey: apiKey,
-        authDomain: authDomain,
-        projectId: projectId,
-        databaseURL: databaseURL,
-        storageBucket: storageBucket,
-        messagingSenderId: messagingSenderId,
-        appId: appId
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    console.log("Firebase configured successfully");
-    return firebase;
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const firebaseConfig = {
-            apiKey: process.env.FIREBASE_API_KEY,
-            authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-            projectId: process.env.FIREBASE_PROJECT_ID,
-            databaseURL: process.env.FIREBASE_DATABASE_URL,
-            storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-            messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-            appId: process.env.FIREBASE_APP_ID
-        };
-        
-        const firebaseInstance = configureFirebase(firebaseConfig.apiKey, firebaseConfig.authDomain, firebaseConfig.projectId, firebaseConfig.databaseURL, firebaseConfig.storageBucket, firebaseConfig.messagingSenderId, firebaseConfig.appId);
-        
+        const proxyUrl = 'https://your-worker-name.your-account.workers.dev';
+
+        async function configureFirebase() {
+            const firebaseConfig = await fetch(`${proxyUrl}/config`).then(res => res.json());
+            return firebase.initializeApp(firebaseConfig);
+        }
+
+        const firebaseInstance = await configureFirebase();
 
         const database = firebaseInstance.database();
         const attendanceSection = document.getElementById('attendance-section');
