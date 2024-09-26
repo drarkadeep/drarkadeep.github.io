@@ -68,6 +68,10 @@ header {
             animation: pulse 3s infinite ease-in-out;
         }
 
+        #profile-image:hover {
+            animation: dal 3s infinite ease-in-out;
+        }
+
         .social-links {
             position: absolute;
             right: 0vw;
@@ -381,7 +385,7 @@ footer {
 
     50% {
         transform: scale(1.1);
-        box-shadow: 0 0 0 15px rgba(248, 161, 33, 0);
+        box-shadow: 0 0 0 1vw rgba(248, 161, 33, 0);
     }
 
     100% {
