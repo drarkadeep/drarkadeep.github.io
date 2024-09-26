@@ -17,13 +17,13 @@ function configureFirebase(apiKey, authDomain, projectId, databaseURL, storageBu
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const firebaseConfig = {
-            apiKey: ,
-            authDomain: ,
-            projectId: ,
-            databaseURL: ,
-            storageBucket: ,
-            messagingSenderId: ,
-            appId: 
+            apiKey: AIzaSyBnq0Rr9iLxwoKS1APNGcaVicqkyex8yv0,
+            authDomain: attendance-tracker-d24ec.firebaseapp.com,
+            projectId: attendance-tracker-d24ec,
+            databaseURL: https://attendance-tracker-d24ec-default-rtdb.asia-southeast1.firebasedatabase.app,
+            storageBucket: attendance-tracker-d24ec.appspot.com,
+            messagingSenderId: 1065640539753,
+            appId: 1:1065640539753:web:3e3bea4909266d584394f8
         };
         
         const firebaseInstance = configureFirebase(firebaseConfig.apiKey, firebaseConfig.authDomain, firebaseConfig.projectId, firebaseConfig.databaseURL, firebaseConfig.storageBucket, firebaseConfig.messagingSenderId, firebaseConfig.appId);
