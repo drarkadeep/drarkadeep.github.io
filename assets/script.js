@@ -1,4 +1,3 @@
-// Function to configure Firebase with environment variables
 function configureFirebase(apiKey, authDomain, projectId, databaseURL, storageBucket, messagingSenderId, appId) {
     const firebaseConfig = {
         apiKey: apiKey,
@@ -10,11 +9,8 @@ function configureFirebase(apiKey, authDomain, projectId, databaseURL, storageBu
         appId: appId
     };
 
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     console.log("Firebase configured successfully");
-
-    // Return the initialized Firebase instance
     return firebase;
 }
 
@@ -33,10 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const firebaseInstance = configureFirebase(firebaseConfig.apiKey, firebaseConfig.authDomain, firebaseConfig.projectId, firebaseConfig.databaseURL, firebaseConfig.storageBucket, firebaseConfig.messagingSenderId, firebaseConfig.appId);
         
 
-        // Access Firebase database after initialization
         const database = firebaseInstance.database();
-
-        // Access other elements and set up Firebase-related functionality
         const attendanceSection = document.getElementById('attendance-section');
         const attendanceBtn = document.getElementById('attendance-btn');
         const attendanceFact = document.querySelectorAll('.attendance-fact');
