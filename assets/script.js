@@ -160,7 +160,7 @@ const preloadImages = srcs => {
     }
 }
 
-let imageSrcs = ["/assets/A_thumbnail.png", "/assets/AM_thumbnail.png"];
+let imageSrcs = ["assets/media/A_thumbnail.png", "assets/media/AM_thumbnail.png"];
 
 preloadImages(imageSrcs);
 
