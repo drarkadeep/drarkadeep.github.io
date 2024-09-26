@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Font face definitions */
+@font-face {
+    font-family: "PPNeueMachina";
+    src: url("fonts/PPNeueMachina-InktrapUltrabold.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PPNeueMachina";
+    src: url("fonts/PPNeueMachina-InktrapUltraboldItalic.otf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PPNeueMachinaLight";
+    src: url("fonts/PPNeueMachina-InktrapLight.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PPNeueMachinaLight";
+    src: url("fonts/PPNeueMachina-InktrapLightItalic.otf");
+    font-style: italic;
+}
+
+/* Global styles */
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    background-color: #222;
+    color: #ddd;
+    user-select: none;
+    transition: background-color 0.5s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header styles */
+header {
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    #profile-image {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        animation: pulse 3s infinite ease-in-out;
+        margin: 3rem 0;
+
+        &:hover {
+            animation: dal 3s infinite ease-in-out;
+            cursor: pointer;
+        }
+    }
+
+    h1 {
+        font-family: "PPNeueMachina";
+        font-size: 3rem;
+        margin: 1em 0;
+
+        &::before {
+            content: "Hi, Arkadeep here 😎";
+            white-space: pre-wrap;
+            opacity: 1;
+            transition: 1s;
+        }
+
+        &::after {
+            content: "";
+            white-space: pre-wrap;
+            opacity: 0;
+            font-weight: 700;
+        }
+
+        &:hover {
+            &::before {
+                content: "";
+                opacity: 0;
+            }
+
+            &::after {
+                content: "নমস্কার অর্কদীপ বলছি 🙏";
+                font-weight: bold;
+                opacity: 1;
+                transition: 1.5s;
+            }
+        }
+    }
+
+    .links {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        max-width: 350px;
+
+        a {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+
+    .btn {
+        font-family: "PPNeueMachinaLight";
+    }
+
+    .portfolio-button {
+        background-color: #222;
+        color: #ddd;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+
+    .mail-button {
+        background-color: #ddd;
+        color: #222;
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+
+    .social-links {
+        list-style: none;
+        margin: 1rem 0;
+        padding: 0;
+        width: 80%;
+        max-width: 350px;
+        display: flex;
+        justify-content: space-between;
+
+        .svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        a:hover {
+            border-bottom: 2px dotted #222;
+        }
+    }
+}
+
+/* Section styles */
+section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.letter {
+    .container {
+        max-width: 840px;
+        margin-bottom: 5rem;
+    }
+
+    h1 {
+        font-family: "PPNeueMachina";
+    }
+
+    p {
+        margin: 2rem 0;
+    }
+
+    #video-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        margin: 4rem 0;
+
+        .video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            max-height: 400px;
+            z-index: 2;
+            transition: opacity 3s ease-in;
+            border-radius: 20px;
+            cursor: pointer;
+
+            &.hidden {
+                opacity: 0;
+            }
+        }
+
+        .back {
+            opacity: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            max-height: 400px;
+            border-radius: 20px;
+        }
+    }
+
+    p a,
+    li a {
+        color: #b700ff;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+}
+
+.big-heading {
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    h1 {
+        font-family: "PPNeueMachina";
+        text-align: center;
+        font-size: 9rem;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+
+    h4 {
+        font-family: "PPNeueMachinaLight";
+        padding-top: 2.5rem;
+        margin-top: 2.5rem;
+        font-size: 3rem;
+        text-align: center;
+        border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+        line-height: 1.2;
+    }
+
+    .container {
+        max-width: 840px;
+    }
+
+    p {
+        margin: 3rem 0;
+    }
+
+    .center-p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        font-family: "PPNeueMachina";
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #222;
+        background-color: #ddd;
+        padding: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+        box-shadow: 5px 5px 2px darkgrey;
+
+        &:hover {
+            background-color: #222;
+            color: #ddd;
+        }
+    }
+
+    &#violet {
+        background-color: rgb(33, 0, 36);
+        box-shadow: 0 -1rem 2rem rgb(33, 0, 36),
+                    0 1rem 2rem rgb(36, 0, 33);
+    }
+
+    &#green {
+        background-color: rgb(0, 36, 19);
+        box-shadow: 0 -1rem 2rem rgb(0, 36, 19),
+                    0 1rem 2rem rgb(0, 36, 19);
+    }
+
+    &#red {
+        background-color: rgb(36, 0, 0);
+        box-shadow: 0 -1rem 2rem rgb(36, 0, 0),
+                    0 1rem 2rem rgb(36, 0, 0);
+    }
+
+    &#blue {
+        background-color: rgb(0, 12, 36);
+        box-shadow: 0 -1rem 2rem rgb(0, 12, 36),
+                    0 1rem 2rem rgb(0, 12, 36);
+    }
+}
+
+/* Footer styles */
+footer {
+    font-family: "PPNeueMachina";
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+/* Attendance section styles */
+#attendance-section {
+    font-family: "PPNeueMachinaLight";
+    display: block;
+    max-width: 840px;
+    width: 80%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #333;
+    color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.5s ease;
+    overflow: hidden;
+
+    &.collapsed {
+        max-height: 0;
+        padding: 0 auto;
+        margin: 0 auto;
+        opacity: 0;
+    }
+
+    h2 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    button {
+        font-family: "PPNeueMachina";
+        margin: 1rem 0;
+        padding: 1rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #222;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #b700ff;
+            color: #ddd;
+            transform: scale(1.05);
+        }
+    }
+
+    #name-input {
+        font-family: "Josefin Sans", sans-serif;
+        margin-top: 1rem;
+        padding: 10px;
+        width: 80%;
+        font-size: 1.3rem;
+        color: #222;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #save-btn {
+        background-color: #ff3333;
+        color: #fff;
+
+        &.named {
+            background-color: #33ff33;
+            color: #222;
+        }
+    }
+
+    #thank-you {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ddd;
+    }
+
+    #attendance-btn {
+        animation: attention 2s infinite;
+    }
+}
+
+/* Scrollbar styles */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: rgba(183, 0, 255, 0.5);
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes dal {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(248, 161, 33, 0.9);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(248, 161, 33, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(248, 161, 33, 0);
+    }
+}
+
+@keyframes attention {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    header {
+        #profile-image {
+            width: 10rem;
+            height: 10rem;
+            margin: 1.5rem 0;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        .links a {
+            font-size: 1.1rem;
+        }
+
+        .social-links .svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .letter {
+        font-size: 1.3rem;
+    }
+
+    .big-heading {
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h4 {
+            font-size: 1.75rem;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    #attendance-section {
+        max-width: 90%;
+        padding: 1.5rem;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        button,
+        #name-input {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .big-heading {
+        h1 {
+            font-size: 6rem;
+        }
+
+        h4 {
+            font-size: 2.5rem;
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+    }
+}
