@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const proxyUrl = 'https://firebase.drarkadeep.workers.dev';
 
         async function configureFirebase() {
-            const firebaseConfig = await fetch(`${proxyUrl}/config`).then(res => res.json());
+            const firebaseConfig = await fetch(`${proxyUrl}/config`, {
+                credentials: 'include'
+            }).then(res => res.json());
             return firebase.initializeApp(firebaseConfig);
         }
 
