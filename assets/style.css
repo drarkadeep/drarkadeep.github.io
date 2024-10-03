@@ -49,14 +49,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5vw;
+    padding: 5vw 0vw;
 
     .header-text {
+        align-self: center;
         line-height: 15vw;
         font-size: 11vw;
         color: #333;
         position: relative;
-        text-shadow: -0.5vw 0vw 0vw gray;
+        text-shadow: 0.5vw 0vw 0vw gray;
 
         #profile-image {
             position: absolute;
@@ -179,6 +180,8 @@ section {
         font-size: 9rem;
         margin-bottom: 0;
         line-height: 1.2;
+        text-shadow: 0.5vw 0vw 0vw gray;
+
     }
 
     h4 {
